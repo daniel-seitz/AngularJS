@@ -1,0 +1,11 @@
+.link {
+    cursor: pointer;
+}
+
+
+.appointment {
+    background: #fff;
+}
+.appointment:hover {
+    background: #ddd;
+}

@@ -1,0 +1,14 @@
+<div class="jumbotron mt-3">
+    <h1>Doctor's Appointments</h1>
+
+    <section class='mt-4'>
+        <article ui-sref="appointment({ appointment: appointment })" ng-repeat="appointment in vm.appointments" class='p-2 mb-3 link appointment'>
+
+            {{ appointment.start | amDateFormat:'YYYY-MM-DD HH:mm' }} - {{ appointment.end | amDateFormat:'HH:mm' }} {{ appointment.client }}: {{ appointment.reason }}
+
+            <div ng-click="vm.delete($event, appointment)" class="float-right bg-danger text-light pl-2 pr-2">Delete</div>
+        </article>
+    </section>
+
+    <button ui-sref="appointment" class="btn btn-primary">Book an appointment</button>
+</div>
