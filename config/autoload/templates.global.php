@@ -6,7 +6,7 @@ use Zend\Expressive\Template\TemplateRendererInterface;
 return [
     'dependencies' => [
         'factories' => [
-            TemplateRendererInterface::class => PlatesRendererFactory::class,
+           TemplateRendererInterface::class => PlatesRendererFactory::class,
         ],
     ],
 
