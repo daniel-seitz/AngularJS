@@ -1,22 +1,22 @@
 <div class="jumbotron mt-3">
     <h1>book an appointment</h1>
 
-    <form>
+    <form name="form" novalidate>
         <div class="form-group">
-            <label for="name">Name </label>
-            <input ng-model="vm.appointment.client" type="text" name="client" class="form-control">
+            <label for="client">Name</label> <span ng-show="(form.$submitted || form.client.$touched) && form.client.$error.required" class="text-danger">is required</span>
+            <input ng-model="vm.appointment.client" type="text" name="client" class="form-control" required>
         </div>
         <div class="form-group">
-            <label for="start">Start </label>
-            <input ng-model="vm.appointment.start" type="datetime-local" id="start" name="start" placeholder="yyyy-MM-ddTHH:mm:ss" min="2017-09-012T00:00:00" max="2099-12-31T00:00:00" class="form-control">
+            <label for="start">Start</label> <span ng-show="(form.$submitted || form.start.$touched) && form.start.$error.required" class="text-danger">is required</span>
+            <input ng-model="vm.appointment.start" type="datetime-local" id="start" name="start" placeholder="yyyy-MM-ddTHH:mm:ss" min="2017-09-012T00:00:00" max="2099-12-31T00:00:00" class="form-control" required>
         </div>
         <div class="form-group">
-            <label for="end">End </label>
-            <input ng-model="vm.appointment.end" type="datetime-local" id="end" name="end" placeholder="yyyy-MM-ddTHH:mm:ss" min="2017-09-012T00:00:00" max="2099-12-31T00:00:00" class="form-control">
+            <label for="end">End</label> <span ng-show="(form.$submitted || form.end.$touched) && form.end.$error.required" class="text-danger">is required</span>
+            <input ng-model="vm.appointment.end" type="datetime-local" id="end" name="end" placeholder="yyyy-MM-ddTHH:mm:ss" min="2017-09-012T00:00:00" max="2099-12-31T00:00:00" class="form-control" required>
         </div>
         <div class="form-group">
-            <label for="reason">Reason </label>
-            <select ng-model="vm.appointment.reason" ng-options="reason.id as reason.title for reason in vm.reasons" name="reason" class="form-control"></select>
+            <label for="reason">Reason</label> <span ng-show="(form.$submitted || form.reason.$touched) && form.reason.$error.required" class="text-danger">is required</span>
+            <select ng-model="vm.appointment.reason" ng-options="reason.id as reason.title for reason in vm.reasons" name="reason" class="form-control" required></select>
         </div>
         <button ui-sref="home" class="btn btn-light">Cancel</button>
         <button ng-click="vm.save()" class="btn btn-success">Save</button>
