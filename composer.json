@@ -1,9 +1,8 @@
 {
-    "name": "zendframework/zend-expressive-skeleton",
-    "description": "Zend expressive skeleton. Begin developing PSR-7 middleware applications in seconds!",
+    "name": "AngularJS booking app",
+    "description": "Sample doctors booking app with AngularJS and Zend expressive.",
     "type": "project",
-    "homepage": "https://github.com/zendframework/zend-expressive-skeleton",
-    "license": "BSD-3-Clause",
+    "license": "MIT",
     "config": {
         "sort-packages": true
     },
