@@ -26,5 +26,20 @@
  * );
  */
 
-$app->get('/', App\Action\HomePageAction::class, 'home');
-$app->get('/api/ping', App\Action\PingAction::class, 'api.ping');
+// home
+$app->get('/', App\Action\HomePageAction::class);
+// home for all routes that don't go to the backend
+$app->get('/{url}', App\Action\HomePageAction::class, 'home');
+
+
+// index
+$app->get('/api/appointments', [App\Action\AppointmentAction::class, 'index']);
+// create
+$app->post('/api/appointments', [App\Action\AppointmentAction::class, 'create']);
+// read
+$app->get('/api/appointments/{id:[0-9]+}', [App\Action\AppointmentAction::class, 'read']);
+// update
+$app->patch('/api/appointments/{id:[0-9]+}', [App\Action\AppointmentAction::class, 'update']);
+// delete
+$app->delete('/api/appointments/{id:[0-9]+}', [App\Action\AppointmentAction::class, 'delete']);
+
