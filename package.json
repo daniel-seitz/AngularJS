@@ -1,7 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "webpack": "node node_modules/webpack/bin/webpack.js --progress --colors --watch --display-error-details"
+    "webpack": "node node_modules/webpack/bin/webpack.js --progress --colors --watch --display-error-details",
+    "build": "node node_modules/webpack/bin/webpack.js --progress --colors --display-error-details"
   },
   "devDependencies": {
     "html-loader": "^0.5.1",
